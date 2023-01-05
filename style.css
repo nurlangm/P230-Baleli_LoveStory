@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width:200px; 
+    height:200px;
+    margin:300px auto;
+    position:relative;
+}
+.box div {
+position:absolute;
+left:0;
+top:0;
+width:200px;
+height:200px;
+backface-visibility: hidden; 
+transform-origin:50% 50% -100px;
+}
+.face1 {
+transform: perspective(600px) rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+animation:face1 10s infinite linear;
+}
+.face2 {
+animation:face2 10s infinite linear;
+}
+.face3 {
+animation:face3 10s infinite linear;
+}
+.face4{
+animation:face4 10s infinite linear;
+}
+.face5 {
+animation:face5 10s infinite linear;
+}
+.face6 {
+animation:face6 10s infinite linear;
+}
+
+
+
+
+
+@keyframes face1 {
+    from
+    {transform: perspective(600px) rotateX(0deg) rotateY(90deg) rotateZ(0deg);}
+    to
+    {transform: perspective(600px) rotateX(360deg) rotateY(450deg) rotateZ(0deg);}
+    }
+    @keyframes face2 {
+    from {transform:perspective(600px) rotateX(0deg) rotateY(270deg) rotateZ(0deg);}
+    100% {transform:perspective(600px) rotateX(360deg) rotateY(630deg) rotateZ(0deg);}
+    }
+    @keyframes face3 {
+    from {transform:perspective(600px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);}
+    100% {transform:perspective(600px) rotateX(450deg) rotateY(0deg) rotateZ(-360deg);}
+    }
+    @keyframes face4 {
+    from {transform:perspective(600px)  rotateX(-90deg) rotateY(0deg) rotateZ(0deg);}
+    100% {transform:perspective(600px) rotateX(270deg) rotateY(0deg) rotateZ(360deg);}
+    }
+    @keyframes face5 {
+    from {transform:perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    100% {transform:perspective(600px) rotateX(360deg) rotateY(360deg) rotateZ(0deg);}
+    }
+    @keyframes face6 {
+    from {transform:perspective(600px)  rotateX(0deg) rotateY(180deg) rotateZ(0deg);}
+    100% {transform:perspective(600px) rotateX(360deg)  rotateY(540deg) rotateZ(0deg);}
+}
+    
